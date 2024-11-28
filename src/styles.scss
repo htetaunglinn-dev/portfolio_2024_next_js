@@ -2,3 +2,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "thunder";
+  src: url("/src/fonts/MyFont.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --swatch--white: white;
+  --swatch--black: rgb(16, 16, 16);
+  --swatch--grey-main: #999;
+  --swatch--grey-stroke-two: #4d4d4d;
+  --swatch--green-light: #dbf2bd;
+  --swatch--blue-dark: #2f3847;
+  --white: white;
+  --black: black;
+  --swatch--grey-stroke-one: #d0d0d0;
+  --swatch--grey-blue: #b3bdce;
+  --swatch--blue-light: #a6b8c6;
+  --swatch--grey-other: #909aaa;
+}
+
+body {
+  background-color: var(--swatch--black);
+  color: var(--swatch--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "thunder", sans-serif;
+}
+
+p,
+a,
+span {
+  font-family: "thunder", sans-serif;
+}
+
+.da-container {
+  @apply px-12 py-10;
+}

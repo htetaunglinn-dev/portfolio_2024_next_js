@@ -1,0 +1,59 @@
+<nav class="da-navbar flex justify-between items-center da-container">
+  <section class="da-nav-left flex items-center gap-2">
+    <img class="da-logo" src="/images/logo.svg" alt="logo" />
+    <p class="text-4xl">DevAsta</p>
+  </section>
+
+  <section class="da-nav-right flex gap-8 items-center">
+    <a
+      href=""
+      class="text-xl font-light border border-white px-8 py-5 rounded-full hover:text-black hover:bg-white transition-colors duration-300 ease-in-out"
+    >
+      contact us
+    </a>
+
+    <div class="flex items-center gap-2" (click)="togglePopup(menuButton)">
+      <p class="text-xl font-light cursor-pointer">menu</p>
+      <div
+        #menuButton
+        class="bg-white shadow-sm p-3 w-16 h-16 rounded-full hover:rotate-90 transform transition-transform duration-400 ease-in-out flex items-center justify-center cursor-pointer"
+      >
+        <img class="da-menu" src="/images/menu.png" alt="menu" />
+      </div>
+
+      @if(showPopup){
+      <section class="da-backdrop" (click)="closePopup()">
+        <div
+          [ngClass]="{ closing: isClosing }"
+          [ngStyle]="{
+            top: popupPosition.top + 'px',
+            left: popupPosition.left + 'px'
+          }"
+          class="popup-menu"
+        >
+          <!-- Close button -->
+          <button
+            (click)="closePopup()"
+            class="absolute top-2 right-2 w-10 h-10 cursor-pointer"
+            aria-label="Close popup"
+          >
+            <img src="/images/close.png" alt="close" />
+          </button>
+
+          <div class="p-8">
+            <div class="text-5xl space-y-3 text-black flex flex-col">
+              <a href="#">portfolio</a>
+              <a href="#">about</a>
+              <a href="#">experience</a>
+              <a href="#">contact us</a>
+            </div>
+            <div class="">
+              <p>Hello</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      }
+    </div>
+  </section>
+</nav>

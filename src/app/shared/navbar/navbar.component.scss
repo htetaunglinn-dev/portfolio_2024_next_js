@@ -1,0 +1,65 @@
+.da-navbar {
+  background-color: rgba(0, 0, 0, 0.118);
+
+  .da-logo {
+    width: 4rem;
+  }
+
+  .da-menu {
+    width: 2rem;
+  }
+
+  .da-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 9;
+
+    .popup-menu {
+      width: 400px; // Match with your TypeScript popupWidth
+      height: auto;
+      position: absolute;
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+      transform-origin: top right; // Transform origin for animations
+      opacity: 0;
+      transform: scale(0.1); // Initial state
+      animation: popupEaseIn 0.4s forwards ease-in; // Default open animation
+    }
+
+    /* Animation for opening */
+    @keyframes popupEaseIn {
+      from {
+        opacity: 0;
+        transform: scale(0.1); // Start slightly smaller
+      }
+      to {
+        opacity: 1;
+        transform: scale(1); // End at full size
+      }
+    }
+
+    /* Animation for closing */
+    @keyframes popupEaseOut {
+      from {
+        opacity: 1;
+        transform: scale(1); // Start at full size
+      }
+      to {
+        opacity: 0;
+        transform: scale(0.1); // Shrink and fade out
+      }
+    }
+
+    /* Hide popup after animation ends */
+    .popup-menu.closing {
+      animation: popupEaseOut 0.3s forwards ease-in;
+    }
+  }
+}
