@@ -1,2 +1,2 @@
-# portfolio_2024_angular
+# portfolio_2024_next_js
 Portfolio Website
