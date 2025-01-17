@@ -8,9 +8,25 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      textColor: {
+        skin: {
+          base: "var(--color-text-base)",
+          muted: "var(--color-text-muted)",
+          inverted: "var(--color-text-inverted)",
+        },
+      },
+      backgroundColor: {
+        skin: {
+          fill: "var(--color-fill)",
+          "button-accent": "var(--color-button-accent)",
+          "button-hover": "var(--color-button-hover)",
+          "button-muted": "var(--color-button-muted)",
+        },
+      },
+      gradientColorStops: {
+        skin: {
+          hue: "var(--color-fill)",
+        },
       },
     },
   },
