@@ -1,7 +1,9 @@
+import Navbar from "../components/navbar/navbar";
 export default function Home() {
   return (
-    <>
-      <p className="text-skin-inverted">Hello This is portfolio</p>
-    </>
+    <div className="">
+      <Navbar></Navbar>
+      <main className=""></main>
+    </div>
   );
 }
