@@ -5,12 +5,12 @@
 @layer base {
   :root {
     --color-text-base: #ffffff;
-    --color-text-muted: #c7d2fe;
-    --color-text-inverted: #4f46e5;
-    --color-fill: #4338ca;
+    --color-text-muted: #dfe7ff;
+    --color-text-inverted: #4169e1;
+    --color-fill: #4169e1;
     --color-button-accent: #ffffff;
     --color-button-accent-hover: #eef2ff;
-    --color-button-muted: #6366f1;
+    --color-button-muted: #6987e1;
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
@@ -91,10 +91,29 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-roboto), sans-serif;
     user-select: none;
   }
-}
 
-.button__text--hover {
-  @apply text-gray-800 dark:text-white font-semibold cursor-pointer hover:text-blue-500 hover:dark:text-cyan-300 transition;
+  .button__text--hover {
+    @apply text-gray-800 dark:text-white font-semibold cursor-pointer hover:text-blue-500 hover:dark:text-cyan-300 transition;
+  }
+
+  .content__container {
+    @apply w-full lg:w-[80%] m-auto lg:px-0 px-8 py-4;
+  }
+
+  .text-gradient-gray {
+    @apply bg-gradient-to-r from-black via-gray-700 to-gray-500 bg-clip-text text-transparent;
+  }
+
+  .button-gradient-gray {
+    @apply bg-gradient-to-r from-black via-gray-700 to-gray-500;
+  }
+
+  .button-submenu {
+    @apply cursor-pointer transition-colors ease-in-out w-full py-2 rounded-sm text-center;
+    @apply hover:bg-skin-fill hover:text-skin-base; /* Default hover effect */
+    @apply lg:hover:bg-transparent lg:hover:text-skin-inverted; /* Remove hover effect on lg screens */
+  }
 }
