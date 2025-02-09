@@ -17,7 +17,7 @@ import Submenu from "./submenu/submenu";
 
 const Navbar = () => {
   return (
-    <div className="w-full bg-white/10 backdrop-blur-sm shadow-sm fixed top-0 left-0">
+    <div className="w-full bg-white/10 backdrop-blur-md shadow-sm fixed top-0 left-0 z-50">
       <nav className="content__container  flex justify-between items-center">
         <section className="flex h-5 items-center space-x-4 text-sm">
           <Image
@@ -33,9 +33,11 @@ const Navbar = () => {
         </section>
 
         <section>
-          <Button className="bg-skin-fill hover:bg-skin-button-muted hidden lg:block">
-            Contact Me
-          </Button>
+          <div className="navbar__btn--right flex gap-3">
+            <Button className="bg-skin-fill hover:bg-skin-button-muted hidden lg:block dark:text-white">
+              Get In Touch
+            </Button>
+          </div>
 
           <div className="lg:hidden">
             <Drawer>
