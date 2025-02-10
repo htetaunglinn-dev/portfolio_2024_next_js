@@ -19,7 +19,7 @@ const ExperienceCard = ({ experienceDataSource }: ExperienceCardProps) => {
               alt={data.companyName}
               width={60}
               height={60}
-              className=" rounded-full p-1 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
+              className=" rounded-full p-2 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
             />
             <div>
               <a

@@ -19,7 +19,7 @@ const Experience = () => {
         "https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1739081714/Portfolio%20Next%20JS%202025/logo/2.png",
       companyName: "ThitsaWorks",
       companyUrl: "https://www.thitsaworks.com/",
-      expPeriod: "Apr 2023 - Dec - 2023",
+      expPeriod: "Apr 2023 - Jan 2024",
       position: "Frontend Developer",
     },
     {
@@ -27,16 +27,17 @@ const Experience = () => {
         "https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1739081714/Portfolio%20Next%20JS%202025/logo/3.png",
       companyName: "GoFive",
       companyUrl: "https://www.gofive.co.th/",
-      expPeriod: "Dec 2023 - Current",
+      expPeriod: "Jan 2024 - Current",
       position: "Frontend Developer",
     },
   ];
 
   return (
-    <div className="h-[100vh]">
+    <div className="pb-40">
       <div className="content__container flex flex-col lg:flex-row gap-10 bg-white rounded-lg px-6 py-6 shadow-2xl shadow-blue-500/20">
         <section className="w-full max-w-[45%] flex-1 relative">
           <Image
+            priority
             src="https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1739075872/Portfolio%20Next%20JS%202025/experience-card.jpg"
             alt="experience card"
             fill
