@@ -101,8 +101,8 @@ const Projects = () => {
                 className="max-w-full max-h-full rounded-lg object-cover"
               />
             </div>
-            <div className="flex-1 p-5">
-              <h3>{`Project ${cardDataSource[activeSection].id}`}</h3>
+            <div className="flex-1 p-5 text-left flex flex-col gap-4">
+              <h3 className="text-gradient-gray text-3xl font-semibold">{`Project ${cardDataSource[activeSection].id}`}</h3>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Blanditiis illum perspiciatis non adipisci? Sint autem rerum

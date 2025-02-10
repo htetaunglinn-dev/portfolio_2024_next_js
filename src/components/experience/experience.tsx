@@ -33,7 +33,7 @@ const Experience = () => {
   ];
 
   return (
-    <div className="pb-40">
+    <div className="pb-48">
       <div className="content__container flex flex-col lg:flex-row gap-10 bg-white rounded-lg px-6 py-6 shadow-2xl shadow-blue-500/20">
         <section className="w-full max-w-[45%] flex-1 relative">
           <Image
