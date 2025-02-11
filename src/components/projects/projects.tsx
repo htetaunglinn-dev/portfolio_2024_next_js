@@ -65,8 +65,11 @@ const Projects = () => {
   }, []);
 
   return (
-    <div>
-      <div className="content__container flex flex-col justify-center items-center gap-4 text-center">
+    <>
+      <div
+        id="projects"
+        className="content__container flex flex-col justify-center items-center gap-4 text-center"
+      >
         <Badge className="bg-skin-fill hover:bg-skin-button-muted">Art</Badge>
         <h2 className="text-5xl font-bold">Selected Projects</h2>
         <p className="w-2/3">
@@ -95,6 +98,7 @@ const Projects = () => {
           <section className="w-full md:w-1/2 sticky top-24 h-[80vh] flex flex-col items-start justify-start bg-white rounded-lg shadow-2xl shadow-blue-500/20">
             <div className="w-full h-[40vh] relative">
               <Image
+                priority
                 src={cardDataSource[activeSection].imageUrl}
                 alt={`Image ${cardDataSource[activeSection].id}`}
                 fill
@@ -113,7 +117,7 @@ const Projects = () => {
           </section>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

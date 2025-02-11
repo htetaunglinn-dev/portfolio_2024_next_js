@@ -7,7 +7,10 @@ import { Badge } from "../ui/badge";
 
 const Contact = () => {
   return (
-    <div className="h-[80vh] content__container flex flex-col justify-center items-center gap-4 text-center relative">
+    <div
+      id="content"
+      className="h-[80vh] content__container flex flex-col justify-center items-center gap-4 text-center relative"
+    >
       <Badge className="bg-skin-fill hover:bg-skin-button-muted">
         Contacts
       </Badge>

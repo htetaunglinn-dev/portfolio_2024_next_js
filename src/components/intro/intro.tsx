@@ -7,7 +7,10 @@ import { Button } from "../ui/button";
 const Intro = () => {
   return (
     <div className="w-full">
-      <section className="content__container h-[80vh] md:h-[90vh] pt-[100px] lg:pt-[70px] flex justify-center items-center ">
+      <section
+        id="about"
+        className="content__container h-[80vh] md:h-[90vh] pt-[100px] lg:pt-[70px] flex justify-center items-center "
+      >
         <div className="intro-content__left flex flex-col justify-center items-center gap-5">
           <span className="text-sm">
             <Badge className="bg-skin-fill hover:bg-skin-button-muted">

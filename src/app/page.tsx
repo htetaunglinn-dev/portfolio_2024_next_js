@@ -1,19 +1,28 @@
-import Intro from "@/components/intro/intro";
-import Navbar from "@/components/navbar/navbar";
-import Experience from "@/components/experience/experience";
-import GradientCircle from "@/components/gradientCircle.tsx/gradientCircle";
-import Projects from "@/components/projects/projects";
-import Contact from "@/components/contact/contact";
+import React, { Suspense } from "react";
+import Loading from "@/components/loading/loading";
+
+const Intro = React.lazy(() => import("@/components/intro/intro"));
+const Navbar = React.lazy(() => import("@/components/navbar/navbar"));
+const Experience = React.lazy(
+  () => import("@/components/experience/experience")
+);
+const GradientCircle = React.lazy(
+  () => import("@/components/gradientCircle/gradientCircle")
+);
+const Projects = React.lazy(() => import("@/components/projects/projects"));
+const Contact = React.lazy(() => import("@/components/contact/contact"));
 
 export default function Home() {
   return (
     <>
-      <GradientCircle />
-      <Navbar />
-      <Intro />
-      <Experience />
-      <Projects />
-      <Contact />
+      <Suspense fallback={<Loading />}>
+        <GradientCircle />
+        <Navbar />
+        <Intro />
+        <Experience />
+        <Projects />
+        <Contact />
+      </Suspense>
     </>
   );
 }
