@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/gradientCircle"
+    "src/components/global/gradientCircle"
   ],
   "exclude": ["node_modules"]
 }

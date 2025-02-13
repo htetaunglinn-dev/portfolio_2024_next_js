@@ -15,19 +15,52 @@ const Contact = () => {
         Contacts
       </Badge>
       <h2 className="text-gradient-gray font-bold text-5xl ">
-        Let`s keep in touch
+        Let’s keep in touch
       </h2>
       <p className="w-2/3">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur
-        ducimus quasi odio nisi. Reiciendis perspiciatis quae atque facilis
-        explicabo voluptas, dolore necessitatibus vero autem voluptatem?
+        I’d love to stay connected and hear from you! Whether you have a
+        question, want to collaborate, or just say hello, feel free to reach
+        out. You can contact me via email at{" "}
+        <a
+          href="mailto:htaunglin@gmail.com"
+          className="text-skin-inverted font-semibold"
+          rel="noopener noreferrer nofollow"
+        >
+          htaunglin@gmail.com
+        </a>{" "}
+        or connect with me on social media platforms. Looking forward to stay in
+        touch!
       </p>
 
       <section className="content-logo flex gap-4 mt-10 ">
-        <IoLogoLinkedin size={30} className="cursor-pointer" />
-        <FaSquareXTwitter size={30} className="cursor-pointer" />
-        <FaFacebookSquare size={30} className="cursor-pointer" />
-        <FaSquareGithub size={30} className="cursor-pointer" />
+        <a
+          href="https://www.linkedin.com/in/htet-aung-linn-51146923b/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <IoLogoLinkedin size={30} className="cursor-pointer" />
+        </a>
+        <a
+          href="https://x.com/HTAUNGLINN1/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <FaSquareXTwitter size={30} className="cursor-pointer" />
+        </a>
+        <a
+          href="https://web.facebook.com/HtetAg11/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <FaFacebookSquare size={30} className="cursor-pointer" />
+        </a>
+        <a
+          href="https://github.com/htetaunglinn-dev"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <FaSquareGithub size={30} className="cursor-pointer" />
+        </a>
       </section>
 
       <p className="flex justify-center items-center absolute bottom-5 m-auto font-semibold">

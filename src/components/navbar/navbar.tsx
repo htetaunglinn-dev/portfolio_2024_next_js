@@ -12,7 +12,6 @@ import {
   DrawerTrigger,
 } from "../ui/drawer";
 
-import "./Navbar.scss";
 import Image from "next/image";
 import Submenu from "./submenu/submenu";
 
