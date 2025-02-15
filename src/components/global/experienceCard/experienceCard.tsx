@@ -2,18 +2,35 @@
 
 import { IExperienceCard } from "@/components/model/experience.model";
 import { ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 interface ExperienceCardProps {
   experienceDataSource: IExperienceCard[];
 }
 
+const transition = { duration: 1, ease: [0.25, 0.1, 0.25, 1] };
+const variants = {
+  hidden: { filter: "blur(10px)", transform: "translateY(20%)", opacity: 0 },
+  visible: { filter: "blur(0)", transform: "translateY(0)", opacity: 1 },
+};
+
 const ExperienceCard = ({ experienceDataSource }: ExperienceCardProps) => {
   return (
     <>
       {experienceDataSource.map((data) => (
-        <section key={data.companyName} className="flex justify-between">
-          <div className="flex justify-center items-center gap-4">
+        <motion.section
+          initial="hidden"
+          whileInView="visible"
+          transition={{ staggerChildren: 0.05 }}
+          key={data.companyName}
+          className="flex justify-between"
+        >
+          <motion.div
+            transition={transition}
+            variants={variants}
+            className="flex justify-center items-center gap-4"
+          >
             <Image
               src={data.logoUrl}
               alt={data.companyName}
@@ -33,11 +50,11 @@ const ExperienceCard = ({ experienceDataSource }: ExperienceCardProps) => {
               </a>
               <p>{data.position}</p>
             </div>
-          </div>
+          </motion.div>
           <div>
             <p className="text-sm">{data.expPeriod}</p>
           </div>
-        </section>
+        </motion.section>
       ))}
     </>
   );

@@ -70,13 +70,19 @@ const Projects = () => {
         id="projects"
         className="content__container flex flex-col justify-center items-center gap-4 text-center"
       >
-        <Badge className="bg-skin-fill hover:bg-skin-button-muted">Art</Badge>
-        <h2 className="text-5xl font-bold">Selected Projects</h2>
-        <p className="w-2/3">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit ut
-          tempore fugiat consequuntur temporibus. Accusantium dignissimos sunt
-          sequi temporibus tenetur?
-        </p>
+        <div className="flex flex-col justify-center items-center gap-4 text-center">
+          <span>
+            <Badge className="bg-skin-fill hover:bg-skin-button-muted">
+              Art
+            </Badge>
+          </span>
+          <h2 className="text-5xl font-bold">Selected Projects</h2>
+          <p className="w-2/3">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
+            ut tempore fugiat consequuntur temporibus. Accusantium dignissimos
+            sunt sequi temporibus tenetur?
+          </p>
+        </div>
 
         <div className="w-full flex gap-10 py-10">
           {/* Left Side (Scrollable) */}
