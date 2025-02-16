@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo, Geist, Geist_Mono, Lora } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 import "./globals.css";
 
@@ -130,6 +132,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${archivo.variable} ${lora.variable} antialiased absolute inset-0 -z-10 h-full w-full  bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] scrollbar-hide`}
       >
         {children}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
