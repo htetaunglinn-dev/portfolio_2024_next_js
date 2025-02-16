@@ -1,38 +1,40 @@
+"use client";
+
 import dynamic from "next/dynamic";
 import Loading from "@/components/global/loading/loading";
 import { Suspense } from "react";
 
 const Intro = dynamic(() => import("@/components/intro/intro"), {
-  ssr: true,
+  ssr: false,
 });
 const Navbar = dynamic(() => import("@/components/navbar/navbar"), {
-  ssr: true,
+  ssr: false,
 });
 const Experience = dynamic(() => import("@/components/experience/experience"), {
-  ssr: true,
+  ssr: false,
 });
 const GradientCircle = dynamic(
   () => import("@/components/global/gradientCircle/gradientCircle"),
-  { ssr: true }
+  { ssr: false }
 );
 const Projects = dynamic(() => import("@/components/projects/projects"), {
-  ssr: true,
+  ssr: false,
 });
 const Contact = dynamic(() => import("@/components/contact/contact"), {
-  ssr: true,
+  ssr: false,
 });
 
 export default function Home() {
   return (
     <>
-      <Suspense fallback={<Loading />}>
-        <GradientCircle />
-        <Navbar />
-        <Intro />
-        <Experience />
-        <Projects />
-        <Contact />
-      </Suspense>
+      {/* <Suspense fallback={<Loading />}> */}
+      <GradientCircle />
+      <Navbar />
+      <Intro />
+      <Experience />
+      <Projects />
+      <Contact />
+      {/* </Suspense> */}
     </>
   );
 }
