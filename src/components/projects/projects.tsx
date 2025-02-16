@@ -122,7 +122,7 @@ const Projects = () => {
                 ref={(el) => {
                   if (el) sectionsRef.current[index] = el;
                 }}
-                className="h-auto md:h-[70vh] lg:h-[80vh] flex items-center justify-center flex-col gap-4 mb-10 md:mb-0"
+                className="min-h-[558px] h-auto md:h-[70vh] lg:h-[80vh] flex items-center justify-center flex-col gap-4 mb-10 md:mb-0"
               >
                 {/* Image for Mobile (Top) */}
                 <div className="w-full h-[40vh] relative md:hidden">

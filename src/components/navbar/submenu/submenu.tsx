@@ -10,34 +10,34 @@ const Submenu = () => {
 
   return (
     <span className="flex flex-col lg:flex-row items-center justify-center lg:space-x-4 text-xl lg:text-sm font-bold lg:font-normal">
-      <a
+      <span
         rel="noopener noreferrer nofollow"
         className="button-submenu"
         onClick={() => scrollToSection("about")}
       >
         About
-      </a>
-      <a
+      </span>
+      <span
         rel="noopener noreferrer nofollow"
         className="button-submenu"
         onClick={() => scrollToSection("experience")}
       >
         Experience
-      </a>
-      <a
+      </span>
+      <span
         rel="noopener noreferrer nofollow"
         className="button-submenu"
         onClick={() => scrollToSection("projects")}
       >
         Projects
-      </a>
-      <a
+      </span>
+      <span
         rel="noopener noreferrer nofollow"
         className="button-submenu"
         onClick={() => scrollToSection("content")}
       >
         Content
-      </a>
+      </span>
     </span>
   );
 };
