@@ -2,7 +2,7 @@
 
 import { IExperienceCard } from "@/components/model/experience.model";
 import { ExternalLink } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Image from "next/image";
 
 interface ExperienceCardProps {
@@ -22,7 +22,8 @@ const ExperienceCard = ({ experienceDataSource }: ExperienceCardProps) => {
         <motion.section
           initial="hidden"
           whileInView="visible"
-          transition={{ staggerChildren: 0.05 }}
+          transition={{ staggerChildren: 0.04 }}
+          viewport={{ once: true }}
           key={data.companyName}
           className="flex justify-between"
         >

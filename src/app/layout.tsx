@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Geist, Geist_Mono } from "next/font/google";
+import { Archivo, Geist, Geist_Mono, Lora } from "next/font/google";
 import "./globals.css";
 // import { ThemeProvider } from "./theme-provider";
 
@@ -16,7 +16,13 @@ const geistMono = Geist_Mono({
 const archivo = Archivo({
   weight: ["400", "700"],
   subsets: ["latin"],
-  variable: "--font-roboto",
+  variable: "--font-archivo",
+});
+
+const lora = Lora({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-lora",
 });
 
 export const metadata: Metadata = {
@@ -33,7 +39,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body
         suppressHydrationWarning={true}
-        className={`${geistSans.variable} ${geistMono.variable} ${archivo.variable} antialiased absolute inset-0 -z-10 h-full w-full  bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] scrollbar-hide`}
+        className={`${geistSans.variable} ${geistMono.variable} ${archivo.variable} ${lora.variable} antialiased absolute inset-0 -z-10 h-full w-full  bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px] scrollbar-hide`}
       >
         {/* <ThemeProvider
           attribute="class"

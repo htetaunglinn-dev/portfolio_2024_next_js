@@ -64,7 +64,9 @@ const Contact = () => {
       </section>
 
       <p className="flex justify-center items-center absolute bottom-5 m-auto font-semibold">
-        Created with passion by Htet Aung Linn <LuCopyright /> 2025
+        Created with passion by
+        <span className="text-skin-inverted mx-1">Htet Aung Linn</span>
+        <LuCopyright /> 2025
       </p>
     </div>
   );

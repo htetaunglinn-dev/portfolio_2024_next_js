@@ -2,7 +2,10 @@
 
 import { Badge } from "../ui/badge";
 import { useState, useEffect, useRef } from "react";
+import { transition, variants } from "../../constants/constants";
+import { motion } from "motion/react";
 import Image from "next/image";
+import { ExternalLink } from "lucide-react";
 
 const Projects = () => {
   const [activeSection, setActiveSection] = useState(0);
@@ -12,23 +15,29 @@ const Projects = () => {
     {
       id: 1,
       imageUrl:
-        "https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1739114790/Portfolio%20Next%20JS%202025/project/pexels-114877721-27940302_vfsncw.jpg",
-      title: "",
-      description: "",
+        "https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1739666729/Portfolio%20Next%20JS%202025/project/2_gf6cpa.svg",
+      title: "DevEnv - News",
+      description:
+        "DevEnv is a cutting-edge technology news website built with Next.js, Tailwind CSS, shadcn UI, and TypeScript. It offers a responsive, user-friendly design with seamless dark mode support, ensuring an optimal reading experience across all devices. Stay updated with the latest in tech with DevEnv's sleek and modern interface.",
+      link: "https://dev-env-five.vercel.app/",
     },
     {
       id: 2,
       imageUrl:
-        "https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1739114789/Portfolio%20Next%20JS%202025/project/pexels-114877721-28544350_g4ocxk.jpg",
-      title: "",
-      description: "",
+        "https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1739666729/Portfolio%20Next%20JS%202025/project/3_q3zabf.svg",
+      title: "Global Supply",
+      description:
+        "Global Supply is a Thailand-based equipment supply company website, built with React, TypeScript (TS), Shadcn UI and Tailwind CSS to deliver a modern, responsive, and user-friendly web experience.",
+      link: "https://global-supply.vercel.app/",
     },
     {
       id: 3,
       imageUrl:
-        "https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1739114789/Portfolio%20Next%20JS%202025/project/pexels-114877721-28544353_akbtuy.jpg",
-      title: "",
-      description: "",
+        "https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1739666729/Portfolio%20Next%20JS%202025/project/1_d0b2h1.svg",
+      title: "AirBnb - Rental",
+      description:
+        "Airbnb is a sleek and modern rental website inspired by Airbnb, built with Next.js, Tailwind CSS, shadcn UI, and JavaScript. It features a responsive, user-friendly design, making it easy to browse and book rentals seamlessly. Experience a contemporary and intuitive platform for all your rental needs.",
+      link: "https://air-bnb-sooty-gamma.vercel.app/",
     },
   ];
 
@@ -70,19 +79,34 @@ const Projects = () => {
         id="projects"
         className="content__container flex flex-col justify-center items-center gap-4 text-center"
       >
-        <div className="flex flex-col justify-center items-center gap-4 text-center">
-          <span>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ delay: 1, staggerChildren: 0.04 }}
+          className="flex flex-col justify-center items-center gap-4 text-center"
+        >
+          <motion.span transition={transition} variants={variants}>
             <Badge className="bg-skin-fill hover:bg-skin-button-muted">
               Art
             </Badge>
-          </span>
-          <h2 className="text-5xl font-bold">Selected Projects</h2>
-          <p className="w-2/3">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
-            ut tempore fugiat consequuntur temporibus. Accusantium dignissimos
-            sunt sequi temporibus tenetur?
-          </p>
-        </div>
+          </motion.span>
+          <motion.h2
+            transition={transition}
+            variants={variants}
+            className="text-5xl font-bold text-gradient-gray w-fit"
+          >
+            Selected Projects
+          </motion.h2>
+          <motion.p
+            transition={transition}
+            variants={variants}
+            className="w-2/3"
+          >
+            Step into my portfolio of projects, where ideas come to life through
+            thoughtful design and cutting-edge technology
+          </motion.p>
+        </motion.div>
 
         <div className="w-full flex gap-10 py-10">
           {/* Left Side (Scrollable) */}
@@ -93,16 +117,26 @@ const Projects = () => {
                 ref={(el) => {
                   if (el) sectionsRef.current[index] = el;
                 }}
-                className="h-[80vh] flex items-center justify-center "
+                className="h-[80vh] flex items-center justify-center flex-col gap-4"
               >
-                <h2 className="text-4xl font-bold">Project {section.id}</h2>
+                <h2 className="text-4xl font-bold">{section.title}</h2>
+                <p>{section.description}</p>
+                <a
+                  href={section.link}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="flex justify-center items-center font-semibold gap-2 text-skin-inverted"
+                >
+                  Visit Live Demo{" "}
+                  <ExternalLink size={14} color="#4169e1" strokeWidth={1.5} />
+                </a>
               </div>
             ))}
           </section>
 
           {/* Right Side (Sticky) */}
-          <section className="w-full md:w-1/2 sticky top-24 h-[80vh] flex flex-col items-start justify-start bg-white rounded-lg shadow-2xl shadow-blue-500/20">
-            <div className="w-full h-[40vh] relative">
+          <section className="w-full md:w-1/2 sticky top-24 h-[80vh] flex flex-col items-start justify-start bg-white rounded-lg">
+            <div className="w-full h-[100vh] relative">
               <Image
                 priority
                 src={cardDataSource[activeSection].imageUrl}
@@ -110,15 +144,6 @@ const Projects = () => {
                 fill
                 className="max-w-full max-h-full rounded-lg object-cover"
               />
-            </div>
-            <div className="flex-1 p-5 text-left flex flex-col gap-4">
-              <h3 className="text-gradient-gray text-3xl font-semibold">{`Project ${cardDataSource[activeSection].id}`}</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Blanditiis illum perspiciatis non adipisci? Sint autem rerum
-                soluta, at, quia neque voluptates, sed maiores aliquid
-                dignissimos mollitia fugiat corrupti non quaerat!
-              </p>
             </div>
           </section>
         </div>
