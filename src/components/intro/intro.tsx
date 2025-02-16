@@ -94,9 +94,14 @@ const Intro = () => {
             >
               Go to GitHub
             </Button>
-            <Button className="bg-skin-button-accent text-xs sm:text-sm text-skin-inverted hover:bg-skin-button-accent-hover">
-              <Download size={20} color="#4169e1" strokeWidth={1.5} /> Resume
-            </Button>
+            <a
+              href="/Htet_Aung_Linn_Resume.pdf"
+              download="Htet_Aung_Linn_Resume.pdf"
+            >
+              <Button className="bg-skin-button-accent text-xs sm:text-sm text-skin-inverted hover:bg-skin-button-accent-hover">
+                <Download size={20} color="#4169e1" strokeWidth={1.5} /> Resume
+              </Button>
+            </a>
           </motion.section>
         </div>
       </section>
