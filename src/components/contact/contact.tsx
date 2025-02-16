@@ -11,7 +11,7 @@ const Contact = () => {
   return (
     <div
       id="content"
-      className="h-[60vh] lg:h-[80vh] content__container flex flex-col justify-center items-center gap-4 text-center relative"
+      className="h-[max(60vh,700px)] lg:h-[80vh] content__container flex flex-col justify-center items-center gap-4 text-center relative"
     >
       <Badge className="bg-skin-fill hover:bg-skin-button-muted">
         Contacts

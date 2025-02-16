@@ -14,6 +14,7 @@ const Submenu = () => {
         rel="noopener noreferrer nofollow"
         className="button-submenu"
         onClick={() => scrollToSection("about")}
+        onTouchEnd={() => scrollToSection("about")}
       >
         About
       </a>
@@ -21,6 +22,7 @@ const Submenu = () => {
         rel="noopener noreferrer nofollow"
         className="button-submenu"
         onClick={() => scrollToSection("experience")}
+        onTouchEnd={() => scrollToSection("experience")}
       >
         Experience
       </a>
@@ -28,6 +30,7 @@ const Submenu = () => {
         rel="noopener noreferrer nofollow"
         className="button-submenu"
         onClick={() => scrollToSection("projects")}
+        onTouchEnd={() => scrollToSection("projects")}
       >
         Projects
       </a>
@@ -35,6 +38,7 @@ const Submenu = () => {
         rel="noopener noreferrer nofollow"
         className="button-submenu"
         onClick={() => scrollToSection("content")}
+        onTouchEnd={() => scrollToSection("content")}
       >
         Content
       </a>

@@ -25,7 +25,10 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY) {
+      if (currentScrollY === 0) {
+        // Always show the navbar when at the top of the page
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY) {
         // Scrolling down
         setIsVisible(false);
       } else {
