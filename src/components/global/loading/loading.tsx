@@ -1,7 +1,11 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import loading from "../../../../public/loading.json";
-import Lottie from "lottie-react";
+
+const Lottie = dynamic(() => import("lottie-react"), {
+  ssr: false,
+});
 
 const Loading = () => {
   return (
