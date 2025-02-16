@@ -1,8 +1,6 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Loading from "@/components/global/loading/loading";
-import { Suspense } from "react";
 
 const Intro = dynamic(() => import("@/components/intro/intro"), {
   ssr: false,
@@ -27,14 +25,12 @@ const Contact = dynamic(() => import("@/components/contact/contact"), {
 export default function Home() {
   return (
     <>
-      {/* <Suspense fallback={<Loading />}> */}
       <GradientCircle />
       <Navbar />
       <Intro />
       <Experience />
       <Projects />
       <Contact />
-      {/* </Suspense> */}
     </>
   );
 }

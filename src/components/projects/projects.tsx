@@ -67,6 +67,7 @@ const Projects = () => {
 
     // Cleanup observer on unmount
     return () => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       sectionsRef.current.forEach((section) => {
         if (section) observer.unobserve(section);
       });
