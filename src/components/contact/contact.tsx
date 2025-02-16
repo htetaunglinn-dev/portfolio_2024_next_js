@@ -1,3 +1,5 @@
+"use client";
+
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
