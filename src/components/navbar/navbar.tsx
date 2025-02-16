@@ -56,7 +56,10 @@ const Navbar = () => {
             height={100}
             alt="logo black"
           />
-          <Separator orientation="vertical" className="text-slate-200 " />
+          <Separator
+            orientation="vertical"
+            className="text-slate-200 hidden lg:block"
+          />
           <div className="hidden lg:flex">
             <Submenu />
           </div>

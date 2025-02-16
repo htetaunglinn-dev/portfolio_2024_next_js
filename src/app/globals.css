@@ -106,12 +106,20 @@
     font-family: var(--font-archivo), sans-serif;
   }
 
+  .header__font {
+    @apply text-3xl md:text-5xl;
+  }
+
+  .paragraph__font {
+    @apply text-sm md:text-base;
+  }
+
   .button__text--hover {
     @apply text-gray-800 dark:text-white font-semibold cursor-pointer hover:text-blue-500 hover:dark:text-cyan-300 transition;
   }
 
   .content__container {
-    @apply w-full lg:w-[80%] m-auto lg:px-0 px-8 py-4;
+    @apply w-full md:w-[90%] lg:w-[80%] m-auto lg:px-0 px-8 py-4;
   }
 
   .text-gradient-gray {

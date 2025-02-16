@@ -27,7 +27,7 @@ const Intro = () => {
     >
       <section
         id="about"
-        className="content__container h-[80vh] md:h-[90vh] pt-[100px] lg:pt-[70px] flex justify-center items-center "
+        className="content__container h-[100vh] md:h-[100vh] pt-[100px] lg:pt-[70px] flex justify-center items-center "
       >
         <div className="intro-content__left flex flex-col justify-center items-center gap-5">
           <motion.span

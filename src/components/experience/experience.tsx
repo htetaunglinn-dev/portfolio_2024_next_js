@@ -54,14 +54,14 @@ const Experience = () => {
             src="https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1739679704/Portfolio%20Next%20JS%202025/experinece/Welcome_n2yrcl.svg"
             alt="experience card"
             fill
-            className="object-cover rounded-md"
+            className="object-contain rounded-md"
           />
         </motion.section>
         <section className="flex-1 space-y-8">
           <motion.h2
             transition={transition}
             variants={variants}
-            className="font-bold text-5xl text-gradient-gray w-fit"
+            className="font-bold header__font text-gradient-gray w-fit"
           >
             Work Experience
           </motion.h2>
@@ -70,7 +70,7 @@ const Experience = () => {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ delay: 1, staggerChildren: 0.04 }}
-            className="flex flex-col gap-5"
+            className="flex flex-col gap-5 paragraph__font"
           >
             <motion.li transition={transition} variants={variants}>
               I started my career as a{" "}

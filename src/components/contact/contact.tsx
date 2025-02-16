@@ -11,15 +11,15 @@ const Contact = () => {
   return (
     <div
       id="content"
-      className="h-[80vh] content__container flex flex-col justify-center items-center gap-4 text-center relative"
+      className="h-[60vh] lg:h-[80vh] content__container flex flex-col justify-center items-center gap-4 text-center relative"
     >
       <Badge className="bg-skin-fill hover:bg-skin-button-muted">
         Contacts
       </Badge>
-      <h2 className="text-gradient-gray font-bold text-5xl ">
+      <h2 className="text-gradient-gray font-bold header__font">
         Let’s keep in touch
       </h2>
-      <p className="w-2/3">
+      <p className="w-3/4 md:w-2/3 paragraph__font">
         I’d love to stay connected and hear from you! Whether you have a
         question, want to collaborate, or just say hello, feel free to reach
         out. You can contact me via email at{" "}
@@ -65,7 +65,7 @@ const Contact = () => {
         </a>
       </section>
 
-      <p className="flex justify-center items-center absolute bottom-5 m-auto font-semibold">
+      <p className="flex justify-center items-center absolute bottom-5 m-auto font-semibold paragraph__font">
         Created with passion by
         <span className="text-skin-inverted mx-1">Htet Aung Linn</span>
         <LuCopyright /> 2025
