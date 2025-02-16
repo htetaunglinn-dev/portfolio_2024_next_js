@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import {
   Drawer,
+  DrawerClose,
   DrawerContent,
   DrawerDescription,
   DrawerHeader,
@@ -18,6 +19,7 @@ import Submenu from "./submenu/submenu";
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -76,7 +78,7 @@ const Navbar = () => {
           </div>
 
           <div className="lg:hidden">
-            <Drawer>
+            <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
               <DrawerTrigger asChild>
                 <Button
                   size="icon"
@@ -94,7 +96,9 @@ const Navbar = () => {
                 <DrawerTitle></DrawerTitle>
                 <DrawerHeader>
                   <DrawerDescription>
-                    <Submenu />
+                    <DrawerClose className="w-full">
+                      <Submenu />
+                    </DrawerClose>
                   </DrawerDescription>
                 </DrawerHeader>
               </DrawerContent>
