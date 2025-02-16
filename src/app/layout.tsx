@@ -19,6 +19,7 @@ const archivo = Archivo({
   weight: ["400", "700"],
   subsets: ["latin"],
   variable: "--font-archivo",
+  display: "swap",
 });
 
 const lora = Lora({
