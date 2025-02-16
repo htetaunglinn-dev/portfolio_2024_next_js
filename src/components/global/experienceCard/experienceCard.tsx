@@ -34,7 +34,7 @@ const ExperienceCard = ({ experienceDataSource }: ExperienceCardProps) => {
           >
             <Image
               src={data.logoUrl}
-              alt={data.companyName}
+              alt={data.alt}
               width={60}
               height={60}
               className=" rounded-full p-2 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)]"

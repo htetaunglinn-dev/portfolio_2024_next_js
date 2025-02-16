@@ -4,4 +4,5 @@ export interface IExperienceCard {
   companyUrl: string;
   expPeriod: string;
   position: string;
+  alt: string;
 }

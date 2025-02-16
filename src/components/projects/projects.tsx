@@ -20,6 +20,7 @@ const Projects = () => {
       description:
         "DevEnv is a cutting-edge technology news website built with Next.js, Tailwind CSS, shadcn UI, and TypeScript. It offers a responsive, user-friendly design with seamless dark mode support, ensuring an optimal reading experience across all devices. Stay updated with the latest in tech with DevEnv's sleek and modern interface.",
       link: "https://dev-env-five.vercel.app/",
+      alt: "Htet Aung Linn - Full Stack Developer in Bangkok, Thailand, DevEnv Project",
     },
     {
       id: 2,
@@ -29,6 +30,7 @@ const Projects = () => {
       description:
         "Global Supply is a Thailand-based equipment supply company website, built with React, TypeScript (TS), Shadcn UI and Tailwind CSS to deliver a modern, responsive, and user-friendly web experience.",
       link: "https://global-supply.vercel.app/",
+      alt: "Htet Aung Linn - Full Stack Developer in Bangkok, Thailand, Global Supply",
     },
     {
       id: 3,
@@ -38,6 +40,7 @@ const Projects = () => {
       description:
         "Airbnb is a sleek and modern rental website inspired by Airbnb, built with Next.js, Tailwind CSS, shadcn UI, and JavaScript. It features a responsive, user-friendly design, making it easy to browse and book rentals seamlessly. Experience a contemporary and intuitive platform for all your rental needs.",
       link: "https://air-bnb-sooty-gamma.vercel.app/",
+      alt: "Htet Aung Linn - Full Stack Developer in Bangkok, Thailand, Airbnb Project",
     },
   ];
 
@@ -156,7 +159,7 @@ const Projects = () => {
               <Image
                 priority
                 src={cardDataSource[activeSection].imageUrl}
-                alt={`Image ${cardDataSource[activeSection].id}`}
+                alt={cardDataSource[activeSection].alt}
                 fill
                 className="max-w-full max-h-full rounded-lg object-contain"
               />

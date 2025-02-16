@@ -18,15 +18,12 @@ const Intro = () => {
   };
 
   return (
-    <motion.div
-      className="w-full"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      transition={{ staggerChildren: 0.04 }}
-    >
-      <section
-        id="about"
+    <div id="about" className="w-full">
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ staggerChildren: 0.04 }}
         className="content__container h-[100vh] md:h-[100vh] pt-[100px] lg:pt-[70px] flex justify-center items-center "
       >
         <div className="intro-content__left flex flex-col justify-center items-center gap-5">
@@ -58,13 +55,13 @@ const Intro = () => {
             <br />
             {positions.map((position, index) => (
               <span key={index}>
-                <motion.span
+                <motion.h2
                   className="inline-block text-gray-600"
                   transition={transition}
                   variants={variants}
                 >
                   {position}
-                </motion.span>
+                </motion.h2>
                 {index < position.length - 1 && " "}
               </span>
             ))}
@@ -77,7 +74,7 @@ const Intro = () => {
           >
             Passionate about crafting seamless web experiences with 4+ years of
             expertise in{" "}
-            <span className="">
+            <span>
               Typescript, React, Angular, Next.js, Node.js, and MongoDB.{" "}
             </span>
             Turn ideas into scalable, high-performance applications that drive
@@ -104,8 +101,8 @@ const Intro = () => {
             </a>
           </motion.section>
         </div>
-      </section>
-    </motion.div>
+      </motion.section>
+    </div>
   );
 };
 

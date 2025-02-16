@@ -15,6 +15,7 @@ const Experience = () => {
       companyUrl: "https://smilaxglobal.com/",
       expPeriod: "Mar 2022 - Feb 2023",
       position: "Frontend Developer",
+      alt: "Htet Aung Linn - Full Stack Developer in Bangkok, Thailand, Smilax Global",
     },
     {
       logoUrl:
@@ -23,6 +24,7 @@ const Experience = () => {
       companyUrl: "https://www.thitsaworks.com/",
       expPeriod: "Apr 2023 - Jan 2024",
       position: "Frontend Developer",
+      alt: "Htet Aung Linn - Full Stack Developer in Bangkok, Thailand, ThitsaWorks",
     },
     {
       logoUrl:
@@ -31,17 +33,17 @@ const Experience = () => {
       companyUrl: "https://www.gofive.co.th/",
       expPeriod: "Jan 2024 - Current",
       position: "Frontend Developer",
+      alt: "Htet Aung Linn - Full Stack Developer in Bangkok, Thailand, GoFive",
     },
   ];
 
   return (
-    <div className="pb-48">
+    <div className="pb-48" id="experience">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         transition={{ staggerChildren: 0.04 }}
-        id="experience"
         className="content__container flex flex-col lg:flex-row gap-10 rounded-lg px-6 py-6 "
       >
         <motion.section
