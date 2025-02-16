@@ -1,16 +1,26 @@
-import React, { Suspense } from "react";
+import dynamic from "next/dynamic";
 import Loading from "@/components/global/loading/loading";
+import { Suspense } from "react";
 
-const Intro = React.lazy(() => import("@/components/intro/intro"));
-const Navbar = React.lazy(() => import("@/components/navbar/navbar"));
-const Experience = React.lazy(
-  () => import("@/components/experience/experience")
+const Intro = dynamic(() => import("@/components/intro/intro"), {
+  ssr: true,
+});
+const Navbar = dynamic(() => import("@/components/navbar/navbar"), {
+  ssr: true,
+});
+const Experience = dynamic(() => import("@/components/experience/experience"), {
+  ssr: true,
+});
+const GradientCircle = dynamic(
+  () => import("@/components/global/gradientCircle/gradientCircle"),
+  { ssr: true }
 );
-const GradientCircle = React.lazy(
-  () => import("@/components/global/gradientCircle/gradientCircle")
-);
-const Projects = React.lazy(() => import("@/components/projects/projects"));
-const Contact = React.lazy(() => import("@/components/contact/contact"));
+const Projects = dynamic(() => import("@/components/projects/projects"), {
+  ssr: true,
+});
+const Contact = dynamic(() => import("@/components/contact/contact"), {
+  ssr: true,
+});
 
 export default function Home() {
   return (
