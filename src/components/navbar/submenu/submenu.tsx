@@ -1,43 +1,47 @@
 "use client";
 
 const Submenu = () => {
-  const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // const scrollToSection = (id: string) => {
+  //   const section = document.getElementById(id);
+  //   if (section) {
+  //     section.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   return (
     <span className="flex flex-col lg:flex-row items-center justify-center lg:space-x-4 text-xl lg:text-sm font-bold lg:font-normal">
-      <span
+      <a
         rel="noopener noreferrer nofollow"
         className="button-submenu"
-        onClick={() => scrollToSection("about")}
+        href="#about"
+        // onClick={() => scrollToSection("about")}
       >
         About
-      </span>
-      <span
+      </a>
+      <a
         rel="noopener noreferrer nofollow"
         className="button-submenu"
-        onClick={() => scrollToSection("experience")}
+        href="#experience"
+        // onClick={() => scrollToSection("experience")}
       >
         Experience
-      </span>
-      <span
+      </a>
+      <a
         rel="noopener noreferrer nofollow"
         className="button-submenu"
-        onClick={() => scrollToSection("projects")}
+        href="#projects"
+        // onClick={() => scrollToSection("projects")}
       >
         Projects
-      </span>
-      <span
+      </a>
+      <a
         rel="noopener noreferrer nofollow"
         className="button-submenu"
-        onClick={() => scrollToSection("content")}
+        href="#content"
+        // onClick={() => scrollToSection("content")}
       >
         Content
-      </span>
+      </a>
     </span>
   );
 };
