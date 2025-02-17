@@ -5,6 +5,7 @@ import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { motion } from "motion/react";
 import { transition, variants } from "../../constants/constants";
+import Link from "next/link";
 
 const Intro = () => {
   const handleGithubRedirect = () => {
@@ -81,14 +82,14 @@ const Intro = () => {
             >
               Go to GitHub
             </Button>
-            <a
+            <Link
               href="/Htet_Aung_Linn_Resume.pdf"
               download="Htet_Aung_Linn_Resume.pdf"
             >
               <Button className="bg-skin-button-accent text-xs sm:text-sm text-skin-inverted hover:bg-skin-button-accent-hover">
                 <Download size={20} color="#4169e1" strokeWidth={1.5} /> Resume
               </Button>
-            </a>
+            </Link>
           </motion.section>
         </div>
       </motion.section>

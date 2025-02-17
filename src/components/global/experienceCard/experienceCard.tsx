@@ -4,6 +4,7 @@ import { IExperienceCard } from "@/components/model/experience.model";
 import { ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ExperienceCardProps {
   experienceDataSource: IExperienceCard[];
@@ -40,7 +41,7 @@ const ExperienceCard = ({ experienceDataSource }: ExperienceCardProps) => {
               className=" rounded-full p-2 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
             />
             <div>
-              <a
+              <Link
                 href={data.companyUrl}
                 target="_blank"
                 className="font-semibold flex gap-1 items-center"
@@ -48,7 +49,7 @@ const ExperienceCard = ({ experienceDataSource }: ExperienceCardProps) => {
               >
                 {data.companyName}
                 <ExternalLink size={14} color="#4169e1" strokeWidth={1.5} />
-              </a>
+              </Link>
               <p>{data.position}</p>
             </div>
           </motion.div>

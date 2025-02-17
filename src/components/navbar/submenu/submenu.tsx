@@ -1,43 +1,22 @@
 "use client";
 
+import Link from "next/link";
+
 const Submenu = () => {
-  const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const NAV_ITEMS = [
+    { title: "About", link: "#about" },
+    { title: "Experience", link: "#experience" },
+    { title: "Projects", link: "#projects" },
+    { title: "Contact", link: "#contact" },
+  ];
 
   return (
     <span className="flex flex-col lg:flex-row items-center justify-center lg:space-x-4 text-xl lg:text-sm font-bold lg:font-normal">
-      <a
-        rel="noopener noreferrer nofollow"
-        className="button-submenu"
-        onClick={() => scrollToSection("about")}
-      >
-        About
-      </a>
-      <a
-        rel="noopener noreferrer nofollow"
-        className="button-submenu"
-        onClick={() => scrollToSection("experience")}
-      >
-        Experience
-      </a>
-      <a
-        rel="noopener noreferrer nofollow"
-        className="button-submenu"
-        onClick={() => scrollToSection("projects")}
-      >
-        Projects
-      </a>
-      <a
-        rel="noopener noreferrer nofollow"
-        className="button-submenu"
-        onClick={() => scrollToSection("contact")}
-      >
-        Contact
-      </a>
+      {NAV_ITEMS.map((item) => (
+        <Link key={item.title} href={item.link} className="button-submenu">
+          {item.title}
+        </Link>
+      ))}
     </span>
   );
 };

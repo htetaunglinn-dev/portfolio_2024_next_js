@@ -6,6 +6,7 @@ import { transition, variants } from "../../constants/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 const Projects = () => {
   const [activeSection, setActiveSection] = useState(0);
@@ -139,7 +140,7 @@ const Projects = () => {
                 <div className="w-full text-center space-y-2 paragraph__font">
                   <h2 className="header__font font-bold">{section.title}</h2>
                   <p>{section.description}</p>
-                  <a
+                  <Link
                     href={section.link}
                     target="_blank"
                     rel="noopener noreferrer nofollow"
@@ -147,7 +148,7 @@ const Projects = () => {
                   >
                     Visit Live Demo{" "}
                     <ExternalLink size={14} color="#4169e1" strokeWidth={1.5} />
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
