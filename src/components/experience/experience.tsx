@@ -38,7 +38,7 @@ const Experience = () => {
   ];
 
   return (
-    <div className="pb-48" id="experience">
+    <div className="pb-36 pt-16" id="experience">
       <motion.div
         initial="hidden"
         whileInView="visible"

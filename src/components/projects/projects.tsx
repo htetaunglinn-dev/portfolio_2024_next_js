@@ -81,7 +81,7 @@ const Projects = () => {
     <>
       <div
         id="projects"
-        className="content__container flex flex-col justify-center items-center gap-4 text-center"
+        className="content__container pt-24 flex flex-col justify-center items-center gap-4 text-center"
       >
         <motion.div
           initial="hidden"
