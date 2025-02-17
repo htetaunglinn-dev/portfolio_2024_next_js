@@ -6,13 +6,7 @@ import { Button } from "../ui/button";
 import { motion } from "motion/react";
 import { transition, variants } from "../../constants/constants";
 
-const name = "Htet Aung Linn @ David";
-const position = "Full Stack Developer";
-
 const Intro = () => {
-  const titles = name.split(" ");
-  const positions = position.split(" ");
-
   const handleGithubRedirect = () => {
     window.open("https://github.com/htetaunglinn-dev", "_blank");
   };
@@ -40,31 +34,27 @@ const Intro = () => {
             </span>
           </motion.span>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold text-center">
-            {titles.map((title, index) => (
-              <span key={index}>
-                <motion.span
-                  className="inline-block text-gray-600"
-                  transition={transition}
-                  variants={variants}
-                >
-                  {title}
-                </motion.span>
-                {index < title.length - 1 && " "}
-              </span>
-            ))}
+            <span>
+              <motion.span
+                className="inline-block text-gray-600"
+                transition={transition}
+                variants={variants}
+              >
+                Htet Aung Linn @ David
+              </motion.span>
+            </span>
+
             <br />
-            {positions.map((position, index) => (
-              <span key={index}>
-                <motion.h2
-                  className="inline-block text-gray-600"
-                  transition={transition}
-                  variants={variants}
-                >
-                  {position}
-                </motion.h2>
-                {index < position.length - 1 && " "}
-              </span>
-            ))}
+
+            <span>
+              <motion.h2
+                className="inline-block text-gray-600"
+                transition={transition}
+                variants={variants}
+              >
+                Full Stack Developer
+              </motion.h2>
+            </span>
           </h1>
 
           <motion.p
