@@ -53,6 +53,14 @@ const Navbar = () => {
     window.location.href = "mailto:htaunglin@gmail.com";
   };
 
+  const handleDrawerLinkClick = (link: string) => {
+    const targetElement = document.querySelector(link);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsDrawerOpen(false);
+  };
+
   return (
     <div
       className={`w-full bg-white/10 backdrop-blur-md shadow-sm fixed top-0 left-0 z-50 transition-transform duration-300 ${
@@ -114,13 +122,13 @@ const Navbar = () => {
                 <DrawerHeader>
                   <DrawerDescription className="flex flex-col lg:flex-row items-center justify-center lg:space-x-4 text-xl lg:text-sm font-bold lg:font-normal">
                     {NAV_ITEMS.map((item) => (
-                      <div
+                      <span
                         key={item.title}
                         className="w-full button-submenu"
-                        onClick={() => setIsDrawerOpen(false)}
+                        onClick={() => handleDrawerLinkClick(item.link)}
                       >
-                        <Link href={item.link}>{item.title}</Link>
-                      </div>
+                        {item.title}
+                      </span>
                     ))}
                   </DrawerDescription>
                 </DrawerHeader>

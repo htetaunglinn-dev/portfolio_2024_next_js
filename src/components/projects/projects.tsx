@@ -85,7 +85,7 @@ const Projects = () => {
         className="content__container pt-24 flex flex-col justify-center items-center gap-4 text-center"
       >
         <motion.div
-          // initial="hidden"
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ delay: 1, staggerChildren: 0.04 }}
