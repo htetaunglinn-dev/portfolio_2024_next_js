@@ -40,7 +40,7 @@ const Experience = () => {
   return (
     <div className="pb-36" id="experience">
       <motion.div
-        // initial="hidden"
+        initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         transition={{ staggerChildren: 0.04 }}

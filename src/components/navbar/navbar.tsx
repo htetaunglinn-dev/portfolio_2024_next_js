@@ -14,7 +14,6 @@ import {
 
 import Image from "next/image";
 import Link from "next/link";
-import { smoothScrollTo } from "../util/smoothScrollTo";
 
 const Navbar = () => {
   const NAV_ITEMS = [
@@ -55,9 +54,11 @@ const Navbar = () => {
   };
 
   const handleDrawerLinkClick = (link: string) => {
-    smoothScrollTo(link);
+    const targetElement = document.querySelector(link);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
     setIsDrawerOpen(false);
-    setIsVisible(false);
   };
 
   return (
