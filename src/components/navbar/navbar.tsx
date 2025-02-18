@@ -57,6 +57,7 @@ const Navbar = () => {
   const handleDrawerLinkClick = (link: string) => {
     smoothScrollTo(link);
     setIsDrawerOpen(false);
+    setIsVisible(false);
   };
 
   return (

@@ -6,7 +6,7 @@ export const smoothScrollTo = (targetId: string) => {
     targetElement.getBoundingClientRect().top + window.pageYOffset;
   const startPosition = window.pageYOffset;
   const distance = targetPosition - startPosition;
-  const duration = 500; // Duration of the scroll animation in milliseconds
+  const duration = 200;
   let startTime: number | null = null;
 
   const animation = (currentTime: number): void => {
