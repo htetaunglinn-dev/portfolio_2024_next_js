@@ -15,7 +15,7 @@ const Intro = () => {
   return (
     <div id="about" className="w-full">
       <motion.section
-        initial="hidden"
+        // initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         transition={{ staggerChildren: 0.04 }}

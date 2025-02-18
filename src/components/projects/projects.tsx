@@ -85,7 +85,7 @@ const Projects = () => {
         className="content__container pt-24 flex flex-col justify-center items-center gap-4 text-center"
       >
         <motion.div
-          initial="hidden"
+          // initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ delay: 1, staggerChildren: 0.04 }}
@@ -132,7 +132,7 @@ const Projects = () => {
                     src={section.imageUrl}
                     alt={`Image ${section.id}`}
                     fill
-                    className="max-w-full max-h-full rounded-lg object-cover"
+                    className="max-w-full max-h-full rounded-lg object-contain"
                   />
                 </div>
 

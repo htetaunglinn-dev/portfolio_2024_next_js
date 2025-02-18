@@ -5,7 +5,6 @@ import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
   DrawerDescription,
   DrawerHeader,
@@ -14,9 +13,16 @@ import {
 } from "../ui/drawer";
 
 import Image from "next/image";
-import Submenu from "./submenu/submenu";
+import Link from "next/link";
 
 const Navbar = () => {
+  const NAV_ITEMS = [
+    { title: "About", link: "#about" },
+    { title: "Experience", link: "#experience" },
+    { title: "Projects", link: "#projects" },
+    { title: "Contact", link: "#contact" },
+  ];
+
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -65,8 +71,16 @@ const Navbar = () => {
             orientation="vertical"
             className="text-slate-200 hidden lg:block"
           />
-          <div className="hidden lg:flex">
-            <Submenu />
+          <div className="hidden lg:flex items-center justify-center lg:space-x-4 text-xl lg:text-sm font-bold lg:font-normal">
+            {NAV_ITEMS.map((item) => (
+              <Link
+                key={item.title}
+                href={item.link}
+                className="button-submenu"
+              >
+                {item.title}
+              </Link>
+            ))}
           </div>
         </section>
 
@@ -98,10 +112,16 @@ const Navbar = () => {
               <DrawerContent>
                 <DrawerTitle></DrawerTitle>
                 <DrawerHeader>
-                  <DrawerDescription>
-                    <DrawerClose className="w-full">
-                      <Submenu />
-                    </DrawerClose>
+                  <DrawerDescription className="flex flex-col lg:flex-row items-center justify-center lg:space-x-4 text-xl lg:text-sm font-bold lg:font-normal">
+                    {NAV_ITEMS.map((item) => (
+                      <div
+                        key={item.title}
+                        className="w-full button-submenu"
+                        onClick={() => setIsDrawerOpen(false)}
+                      >
+                        <Link href={item.link}>{item.title}</Link>
+                      </div>
+                    ))}
                   </DrawerDescription>
                 </DrawerHeader>
               </DrawerContent>
