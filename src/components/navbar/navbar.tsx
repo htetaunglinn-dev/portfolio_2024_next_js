@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
+import { scrollIntoView } from "seamless-scroll-polyfill";
 import {
   Drawer,
   DrawerContent,
@@ -55,8 +56,13 @@ const Navbar = () => {
 
   const handleDrawerLinkClick = (link: string) => {
     const targetElement = document.querySelector(link);
+
     if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
+      scrollIntoView(targetElement, {
+        behavior: "smooth",
+        block: "start",
+        inline: "center",
+      });
     }
     setIsDrawerOpen(false);
   };
