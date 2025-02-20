@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
-import { scrollIntoView } from "seamless-scroll-polyfill";
 import {
   Drawer,
   DrawerContent,
@@ -54,16 +53,7 @@ const Navbar = () => {
     window.location.href = "mailto:htaunglin@gmail.com";
   };
 
-  const handleDrawerLinkClick = (link: string) => {
-    const targetElement = document.querySelector(link);
-
-    if (targetElement) {
-      scrollIntoView(targetElement, {
-        behavior: "smooth",
-        block: "start",
-        inline: "center",
-      });
-    }
+  const handleDrawerLinkClick = () => {
     setIsDrawerOpen(false);
   };
 
@@ -128,13 +118,14 @@ const Navbar = () => {
                 <DrawerHeader>
                   <DrawerDescription className="flex flex-col lg:flex-row items-center justify-center lg:space-x-4 text-xl lg:text-sm font-bold lg:font-normal">
                     {NAV_ITEMS.map((item) => (
-                      <span
-                        key={item.title}
+                      <Link
                         className="w-full button-submenu"
-                        onClick={() => handleDrawerLinkClick(item.link)}
+                        key={item.title}
+                        href={item.link}
+                        onClick={handleDrawerLinkClick}
                       >
                         {item.title}
-                      </span>
+                      </Link>
                     ))}
                   </DrawerDescription>
                 </DrawerHeader>
