@@ -107,11 +107,11 @@
   }
 
   .header__font {
-    @apply text-3xl md:text-5xl;
+    @apply text-3xl md:text-4xl lg:text-5xl;
   }
 
   .paragraph__font {
-    @apply text-sm md:text-base;
+    @apply text-sm lg:text-base;
   }
 
   .button__text--hover {

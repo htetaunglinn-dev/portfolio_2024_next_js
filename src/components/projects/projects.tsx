@@ -123,7 +123,7 @@ const Projects = () => {
                 ref={(el) => {
                   if (el) sectionsRef.current[index] = el;
                 }}
-                className="min-h-[558px] h-auto md:h-[70vh] lg:h-[80vh] flex items-center justify-center flex-col gap-4 mb-10 md:mb-0"
+                className="min-h-[558px] h-auto md:h-[50vh] lg:h-[80vh] flex items-center justify-center flex-col gap-4 mb-10 md:mb-0"
               >
                 {/* Image for Mobile (Top) */}
                 <div className="w-full h-[40vh] relative md:hidden">
@@ -138,8 +138,10 @@ const Projects = () => {
 
                 {/* Text for Mobile (Bottom) */}
                 <div className="w-full text-center space-y-2 paragraph__font">
-                  <h2 className="header__font font-bold">{section.title}</h2>
-                  <p>{section.description}</p>
+                  <h2 className="header__font text-gradient-gray font-bold">
+                    {section.title}
+                  </h2>
+                  <p className="paragraph__font">{section.description}</p>
                   <Link
                     href={section.link}
                     target="_blank"
@@ -155,8 +157,8 @@ const Projects = () => {
           </section>
 
           {/* Right Side (Sticky on Desktop, Hidden on Mobile) */}
-          <section className="hidden w-full md:w-1/2 sticky top-24 h-auto md:h-[70vh] lg:h-[80vh] md:flex flex-col items-start justify-start bg-white rounded-lg">
-            <div className="w-full md:h-[70vh] lg:h-[80vh] relative">
+          <section className="hidden w-full md:w-1/2 sticky top-24 h-auto md:h-[50vh] lg:h-[80vh] md:flex flex-col items-start justify-start bg-white rounded-lg">
+            <div className="w-full md:h-[50vh] lg:h-[80vh] relative">
               <Image
                 priority
                 src={cardDataSource[activeSection].imageUrl}

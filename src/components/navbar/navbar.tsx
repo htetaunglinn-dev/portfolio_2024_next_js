@@ -53,7 +53,18 @@ const Navbar = () => {
     window.location.href = "mailto:htaunglin@gmail.com";
   };
 
-  const handleDrawerLinkClick = () => {
+  const handleLinkClick = (link: string) => {
+    const targetId = link.substring(1);
+    setTimeout(() => {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        if ("scrollBehavior" in document.documentElement.style) {
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        } else {
+          targetElement.scrollIntoView();
+        }
+      }
+    }, 100);
     setIsDrawerOpen(false);
   };
 
@@ -81,6 +92,7 @@ const Navbar = () => {
                 key={item.title}
                 href={item.link}
                 className="button-submenu"
+                onClick={() => handleLinkClick(item.link)}
               >
                 {item.title}
               </Link>
@@ -122,7 +134,7 @@ const Navbar = () => {
                         className="w-full button-submenu"
                         key={item.title}
                         href={item.link}
-                        onClick={handleDrawerLinkClick}
+                        onClick={() => handleLinkClick(item.link)}
                       >
                         {item.title}
                       </Link>

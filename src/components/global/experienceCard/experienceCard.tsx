@@ -2,6 +2,7 @@
 
 import { IExperienceCard } from "@/components/model/experience.model";
 import { ExternalLink } from "lucide-react";
+import { transition, variants } from "@/constants/constants";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,12 +10,6 @@ import Link from "next/link";
 interface ExperienceCardProps {
   experienceDataSource: IExperienceCard[];
 }
-
-const transition = { duration: 1, ease: [0.25, 0.1, 0.25, 1] };
-const variants = {
-  hidden: { filter: "blur(10px)", transform: "translateY(20%)", opacity: 0 },
-  visible: { filter: "blur(0)", transform: "translateY(0)", opacity: 1 },
-};
 
 const ExperienceCard = ({ experienceDataSource }: ExperienceCardProps) => {
   return (
@@ -53,9 +48,9 @@ const ExperienceCard = ({ experienceDataSource }: ExperienceCardProps) => {
               <p>{data.position}</p>
             </div>
           </motion.div>
-          <div>
+          <motion.div transition={transition} variants={variants}>
             <p className="text-sm">{data.expPeriod}</p>
-          </div>
+          </motion.div>
         </motion.section>
       ))}
     </>
