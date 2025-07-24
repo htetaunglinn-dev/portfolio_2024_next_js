@@ -5,11 +5,13 @@ import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
 import { motion } from "motion/react";
 import { transition, variants } from "../../constants/constants";
+import { safeWindowOpen } from "../../utils/security";
 import Link from "next/link";
 
 const Intro = () => {
   const handleGithubRedirect = () => {
-    window.open("https://github.com/htetaunglinn-dev", "_blank");
+    // Use secure utility function for external links
+    safeWindowOpen("https://github.com/htetaunglinn-dev");
   };
 
   return (

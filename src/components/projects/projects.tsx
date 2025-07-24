@@ -6,6 +6,7 @@ import { transition, variants } from "../../constants/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
+import { getSecureLinkProps } from "../../utils/security";
 import Link from "next/link";
 
 const Projects = () => {
@@ -143,9 +144,7 @@ const Projects = () => {
                   </h2>
                   <p className="paragraph__font">{section.description}</p>
                   <Link
-                    href={section.link}
-                    target="_blank"
-                    rel="noopener noreferrer nofollow"
+                    {...getSecureLinkProps(section.link)}
                     className="flex justify-center items-center font-semibold gap-2 text-skin-inverted"
                   >
                     Visit Live Demo{" "}

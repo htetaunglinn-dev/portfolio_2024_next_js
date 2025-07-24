@@ -11,6 +11,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "../ui/drawer";
+import { isValidEmail, rateLimiter } from "../../utils/security";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -50,7 +51,20 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   const openEmail = () => {
-    window.location.href = "mailto:htaunglin@gmail.com";
+    // Rate limiting to prevent spam
+    if (!rateLimiter.isAllowed('email_open', 3, 60000)) {
+      console.warn("Too many email attempts. Please wait.");
+      return;
+    }
+
+    const email = "htaunglin@gmail.com";
+    
+    if (isValidEmail(email)) {
+      // Use window.location.assign for better security
+      window.location.assign(`mailto:${email}`);
+    } else {
+      console.error("Invalid email address");
+    }
   };
 
   const handleLinkClick = (link: string) => {

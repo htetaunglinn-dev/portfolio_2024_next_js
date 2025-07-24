@@ -4,6 +4,7 @@ import { IExperienceCard } from "@/components/model/experience.model";
 import { ExternalLink } from "lucide-react";
 import { transition, variants } from "@/constants/constants";
 import { motion } from "motion/react";
+import { getSecureLinkProps } from "@/utils/security";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -37,10 +38,8 @@ const ExperienceCard = ({ experienceDataSource }: ExperienceCardProps) => {
             />
             <div>
               <Link
-                href={data.companyUrl}
-                target="_blank"
+                {...getSecureLinkProps(data.companyUrl)}
                 className="font-semibold flex gap-1 items-center"
-                rel="noopener noreferrer nofollow"
               >
                 {data.companyName}
                 <ExternalLink size={14} color="#4169e1" strokeWidth={1.5} />
