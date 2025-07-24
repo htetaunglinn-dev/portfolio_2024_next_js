@@ -53,7 +53,7 @@ const Experience = () => {
         >
           <Image
             priority
-            src="https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1739679704/Portfolio%20Next%20JS%202025/experinece/Welcome_n2yrcl.svg"
+            src="https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1753371823/Portfolio%20Next%20JS%202025/experinece/z6lz0rmuf9mdhj1vcwhv.png"
             alt="experience card"
             fill
             className="object-contain rounded-md"

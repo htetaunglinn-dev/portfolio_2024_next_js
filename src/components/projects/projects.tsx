@@ -16,7 +16,7 @@ const Projects = () => {
     {
       id: 1,
       imageUrl:
-        "https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1739666729/Portfolio%20Next%20JS%202025/project/2_gf6cpa.svg",
+        "https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1753371976/Portfolio%20Next%20JS%202025/project/xizve9eep7ocnh9kdey7.png",
       title: "DevEnv ~ News",
       description:
         "DevEnv is a cutting-edge technology news website built with Next.js, Tailwind CSS, shadcn UI, and TypeScript. It offers a responsive, user-friendly design with seamless dark mode support, ensuring an optimal reading experience across all devices. Stay updated with the latest in tech with DevEnv's sleek and modern interface.",
@@ -26,7 +26,7 @@ const Projects = () => {
     {
       id: 2,
       imageUrl:
-        "https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1739666729/Portfolio%20Next%20JS%202025/project/3_q3zabf.svg",
+        "https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1753371976/Portfolio%20Next%20JS%202025/project/uangjnxhnqbkmr55e7p9.png",
       title: "Global Supply",
       description:
         "Global Supply is a Thailand-based equipment supply company website, built with React, TypeScript (TS), Shadcn UI and Tailwind CSS to deliver a modern, responsive, and user-friendly web experience.",
@@ -36,7 +36,7 @@ const Projects = () => {
     {
       id: 3,
       imageUrl:
-        "https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1739666729/Portfolio%20Next%20JS%202025/project/1_d0b2h1.svg",
+        "https://res.cloudinary.com/htetaunglinn-dev/image/upload/v1753371976/Portfolio%20Next%20JS%202025/project/n8gbkwny4wsoisbb5hxg.png",
       title: "AirBnb ~ Rental",
       description:
         "Airbnb is a sleek and modern rental website inspired by Airbnb, built with Next.js, Tailwind CSS, shadcn UI, and JavaScript. It features a responsive, user-friendly design, making it easy to browse and book rentals seamlessly. Experience a contemporary and intuitive platform for all your rental needs.",
@@ -157,7 +157,7 @@ const Projects = () => {
           </section>
 
           {/* Right Side (Sticky on Desktop, Hidden on Mobile) */}
-          <section className="hidden w-full md:w-1/2 sticky top-24 h-auto md:h-[50vh] lg:h-[80vh] md:flex flex-col items-start justify-start bg-white rounded-lg">
+          <section className="hidden w-full md:w-1/2 sticky top-24 h-auto md:h-[50vh] lg:h-[80vh] md:flex flex-col items-start justify-start rounded-lg">
             <div className="w-full md:h-[50vh] lg:h-[80vh] relative">
               <Image
                 priority
