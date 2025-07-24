@@ -55,17 +55,53 @@ const Navbar = () => {
 
   const handleLinkClick = (link: string) => {
     const targetId = link.substring(1);
+    setIsDrawerOpen(false);
+    
+    // Increased timeout to ensure drawer closes completely
     setTimeout(() => {
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
-        if ("scrollBehavior" in document.documentElement.style) {
-          targetElement.scrollIntoView({ behavior: "smooth" });
+        // Check if browser supports smooth scrolling
+        const supportsSmooth = 'scrollBehavior' in document.documentElement.style;
+        
+        if (supportsSmooth) {
+          targetElement.scrollIntoView({ 
+            behavior: "smooth", 
+            block: "start",
+            inline: "nearest"
+          });
         } else {
-          targetElement.scrollIntoView();
+          // Fallback for older mobile browsers - polyfill smooth scroll
+          smoothScrollTo(targetElement);
         }
       }
-    }, 100);
-    setIsDrawerOpen(false);
+    }, 300);
+  };
+
+  // Polyfill for smooth scrolling on older mobile browsers
+  const smoothScrollTo = (element: HTMLElement) => {
+    const targetPosition = element.offsetTop - 80; // Account for fixed navbar
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 800;
+    let start: number | null = null;
+
+    const animation = (currentTime: number) => {
+      if (start === null) start = currentTime;
+      const timeElapsed = currentTime - start;
+      const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+      window.scrollTo(0, run);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    };
+
+    const easeInOutQuad = (t: number, b: number, c: number, d: number) => {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    };
+
+    requestAnimationFrame(animation);
   };
 
   return (
