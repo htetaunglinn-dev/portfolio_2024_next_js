@@ -22,13 +22,6 @@ export function middleware(request: NextRequest) {
     return new NextResponse('Access Denied', { status: 403 });
   }
 
-  // Rate limiting by IP (simple implementation)
-  const ip = request.ip || request.headers.get('x-forwarded-for') || 'unknown';
-  const now = Date.now();
-  
-  // In production, you'd use a proper rate limiting service like Redis
-  // This is a basic in-memory implementation for demonstration
-  
   return response;
 }
 
