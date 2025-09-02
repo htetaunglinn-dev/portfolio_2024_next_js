@@ -21,7 +21,7 @@ const Projects = () => {
       title: "DevEnv ~ News",
       description:
         "DevEnv is a cutting-edge technology news website built with Next.js, Tailwind CSS, shadcn UI, and TypeScript. It offers a responsive, user-friendly design with seamless dark mode support, ensuring an optimal reading experience across all devices. Stay updated with the latest in tech with DevEnv's sleek and modern interface.",
-      link: "https://dev-env-five.vercel.app/",
+      link: "https://dev-env-bbk.vercel.app/",
       alt: "Htet Aung Linn - Full Stack Developer in Bangkok, Thailand, DevEnv Project",
     },
     {
